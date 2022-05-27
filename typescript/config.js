@@ -104,7 +104,7 @@ module.exports = {
     '@typescript-eslint/no-extra-non-null-assertion': ['error'],
     '@typescript-eslint/no-extraneous-class': ['off'],
     '@typescript-eslint/no-floating-promises': ['off'],
-    '@typescript-eslint/no-for-in-array': ['warn'],
+    // '@typescript-eslint/no-for-in-array': ['warn'], // project
     '@typescript-eslint/no-implied-eval': ['off'],
     '@typescript-eslint/no-inferrable-types': ['off'],
     '@typescript-eslint/no-invalid-void-type': ['error'],

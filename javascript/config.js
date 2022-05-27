@@ -74,7 +74,7 @@ module.exports = {
     'max-params': ['error', 5],
     'max-statements': ['off'],
     'multiline-comment-style': ['off'],
-    'new-cap': ['error'],
+    'new-cap': ['off'],
     'no-alert': ['error'],
     'no-array-constructor': ['error'],
     'no-bitwise': ['off'],
@@ -139,9 +139,10 @@ module.exports = {
     'no-shadow': [
       'error',
       {
-        builtinGlobals: true,
-        hoist: 'all',
+        builtinGlobals: false,
+        hoist: 'functions',
         allow: [
+          'id',
           'name',
           'value',
           'node',
@@ -155,7 +156,9 @@ module.exports = {
           'close',
           'confirm',
           'Option',
+          'level',
         ],
+        ignoreOnInitialization: true,
       },
     ],
     'no-ternary': ['off'],

@@ -62,6 +62,7 @@ module.exports = {
     'vue/no-v-html': ['off'],
 
     'vue/singleline-html-element-content-newline': ['off'],
+    'vue/multi-word-component-names': ['off'],
 
     /* Uncategorized */
     'vue/block-tag-newline': [
