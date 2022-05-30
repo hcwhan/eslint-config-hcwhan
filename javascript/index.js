@@ -1,5 +1,3 @@
-const javascriptConfig = require('./config.js')
-
 module.exports = {
   ignorePatterns: [
     '*.min.*',
@@ -18,7 +16,7 @@ module.exports = {
     '!.vitepress',
     '!.vscode',
   ],
-  extends: [...javascriptConfig.extends, 'plugin:prettier/recommended'],
+  extends: ['./config.js', 'plugin:prettier/recommended'],
   env: {
     browser: true,
     node: true,
@@ -34,7 +32,6 @@ module.exports = {
     window: 'readonly',
   },
   plugins: [],
-  rules: {
-    ...javascriptConfig.rules,
-  },
+  rules: {},
+  overrides: [],
 }

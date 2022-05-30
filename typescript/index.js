@@ -1,14 +1,13 @@
-const typescriptConfig = require('./config.js')
+const javascript = require('../javascript/index.js')
 
 module.exports = {
-  extends: ['../javascript/index.js', 'plugin:prettier/recommended'],
+  extends: ['../javascript/index.js'],
   overrides: [
+    ...javascript.overrides,
     {
       files: ['*.ts'],
-      extends: [...typescriptConfig.extends, 'plugin:prettier/recommended'],
-      rules: {
-        ...typescriptConfig.rules,
-      },
+      extends: ['./config.js', 'plugin:prettier/recommended'],
+      rules: {},
     },
   ],
 }
