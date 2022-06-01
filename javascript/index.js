@@ -16,7 +16,6 @@ module.exports = {
     '!.vitepress',
     '!.vscode',
   ],
-  extends: ['./config.js', 'plugin:prettier/recommended'],
   env: {
     browser: true,
     node: true,
@@ -32,6 +31,6 @@ module.exports = {
     window: 'readonly',
   },
   plugins: [],
-  rules: {},
+  extends: ['./config.js', 'plugin:prettier/recommended'],
   overrides: [],
 }

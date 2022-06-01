@@ -63,6 +63,9 @@ module.exports = {
 
     'vue/singleline-html-element-content-newline': ['off'],
     'vue/multi-word-component-names': ['off'],
+    'vue/attribute-hyphenation': ['warn', 'never'],
+    'vue/require-v-for-key': ['off'],
+    'vue/valid-v-for': ['off'],
 
     /* Uncategorized */
     'vue/block-tag-newline': [
