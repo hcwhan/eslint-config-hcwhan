@@ -1,5 +1,6 @@
 module.exports = {
   extends: ['eslint:recommended'],
+  plugins: ['no-autofix'],
   rules: {
     // "eslint": "8.16.0",
 
@@ -188,13 +189,7 @@ module.exports = {
     'one-var-declaration-per-line': ['off'],
     'operator-assignment': ['error'],
     'prefer-arrow-callback': ['error'],
-    'prefer-const': [
-      'warn',
-      {
-        destructuring: 'all',
-        ignoreReadBeforeAssign: false,
-      },
-    ],
+    // 'prefer-const': [], // no-autofix
     'prefer-destructuring': ['off'],
     'prefer-exponentiation-operator': ['error'],
     'prefer-named-capture-group': ['off'],
@@ -366,6 +361,16 @@ module.exports = {
       {
         before: true,
         after: true,
+      },
+    ],
+
+    /* no-autofix */
+    'prefer-const': ['off'],
+    'no-autofix/prefer-const': [
+      'warn',
+      {
+        destructuring: 'all',
+        ignoreReadBeforeAssign: false,
       },
     ],
   },
