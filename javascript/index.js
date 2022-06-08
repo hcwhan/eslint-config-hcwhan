@@ -31,6 +31,9 @@ module.exports = {
     window: 'readonly',
   },
   plugins: [],
-  extends: ['./config.js', 'plugin:prettier/recommended'],
+  extends: ['../config/javascript-config.js', 'plugin:prettier/recommended'],
+  rules: {
+    'prettier/prettier': ['warn'],
+  },
   overrides: [],
 }
