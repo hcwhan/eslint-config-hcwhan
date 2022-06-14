@@ -18,6 +18,7 @@ module.exports = {
       {
         args: 'after-used',
         argsIgnorePattern: '^_',
+        destructuredArrayIgnorePattern: '^_',
       },
     ],
 
