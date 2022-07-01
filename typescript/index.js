@@ -1,9 +1,9 @@
 module.exports = {
-  extends: ['../javascript/index.js'],
+  extends: ['../base/index.js'],
   overrides: [
     {
       files: ['*.ts'],
-      extends: ['../config/typescript-config.js', 'plugin:prettier/recommended'],
+      extends: ['../rules/typescript-rules.js', 'plugin:prettier/recommended'],
       rules: {
         'prettier/prettier': ['warn'],
       },

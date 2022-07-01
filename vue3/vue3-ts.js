@@ -1,12 +1,12 @@
-const typescript = require('../typescript/index.js')
+const TypescriptConfig = require('../typescript/index.js')
 
 module.exports = {
-  extends: ['../javascript/index.js'],
+  extends: ['../base/index.js'],
   overrides: [
-    ...typescript.overrides,
+    ...TypescriptConfig.overrides,
     {
       files: ['*.vue'],
-      extends: ['../config/typescript-config.js', '../config/vue3-config.js', 'plugin:prettier/recommended'],
+      extends: ['../rules/typescript-rules.js', '../rules/vue3-rules.js', 'plugin:prettier/recommended'],
       parser: 'vue-eslint-parser',
       parserOptions: {
         parser: '@typescript-eslint/parser',

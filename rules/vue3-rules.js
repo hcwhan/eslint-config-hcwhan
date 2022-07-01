@@ -1,4 +1,4 @@
-const javascriptConfig = require('./javascript-config.js')
+const baseRules = require('./base-rules.js')
 
 const extendRules = [
   'array-bracket-newline',
@@ -45,7 +45,13 @@ module.exports = {
     // "eslint-plugin-vue": "9.0.1",
 
     /* Override JS*/
-    'no-undef': ['off'],
+    // set here
+
+    /* Extend Rules */
+    ...extendRules.reduce((rules, ruleName) => {
+      rules[`vue/${ruleName}`] = baseRules.rules[ruleName] || ['error']
+      return rules
+    }, {}),
 
     /* recommended change */
     'vue/no-mutating-props': ['off'],
@@ -110,11 +116,5 @@ module.exports = {
     'vue/prefer-separate-static-class': ['warn'],
     'vue/require-emit-validator': ['error'],
     'vue/v-for-delimiter-style': ['warn', 'of'],
-
-    /* Extend Rules */
-    ...extendRules.reduce((rules, ruleName) => {
-      rules[`vue/${ruleName}`] = javascriptConfig.rules[ruleName] || ['error']
-      return rules
-    }, {}),
   },
 }

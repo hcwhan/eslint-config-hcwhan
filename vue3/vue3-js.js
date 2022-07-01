@@ -1,13 +1,10 @@
 module.exports = {
-  extends: ['../javascript/index.js'],
+  extends: ['../base/index.js'],
   overrides: [
     {
       files: ['*.vue'],
-      extends: ['../config/vue3-config.js', 'plugin:prettier/recommended'],
+      extends: ['../rules/vue3-rules.js', 'plugin:prettier/recommended'],
       parser: 'vue-eslint-parser',
-      parserOptions: {
-        parser: '@typescript-eslint/parser',
-      },
       rules: {
         'prettier/prettier': ['warn'],
 

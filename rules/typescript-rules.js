@@ -1,4 +1,7 @@
-const javascriptConfig = require('./javascript-config.js')
+const typescriptRecommended = require('@typescript-eslint/eslint-plugin/dist/configs/eslint-recommended')
+const typescriptOverrideRules = typescriptRecommended.overrides.find(({ files }) => files.includes('*.ts')).rules
+
+const baseRules = require('./base-rules.js')
 
 const extendRules = [
   'brace-style',
@@ -47,14 +50,17 @@ module.exports = {
     /* Override JS*/
     'no-duplicate-imports': ['off'],
 
+    /* typescriptOverrideRules*/
+    ...typescriptOverrideRules,
+
     /* Extend Rules */
     ...extendRules.reduce((rules, ruleName) => {
       rules[ruleName] = ['off']
-      rules[`@typescript-eslint/${ruleName}`] = javascriptConfig.rules[ruleName] || ['error']
+      rules[`@typescript-eslint/${ruleName}`] = baseRules.rules[ruleName] || ['error']
       return rules
     }, {}),
     'no-return-await': ['off'],
-    '@typescript-eslint/return-await': javascriptConfig.rules['no-return-await'],
+    '@typescript-eslint/return-await': baseRules.rules['no-return-await'],
 
     /* Typescript */
     '@typescript-eslint/adjacent-overload-signatures': ['error'],

@@ -1,3 +1,3 @@
-const langTs = require('./lang-ts.js')
+const Vue3TsConfig = require('./vue3-ts.js')
 
-module.exports = langTs
+module.exports = Vue3TsConfig
