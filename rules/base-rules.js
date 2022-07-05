@@ -215,7 +215,21 @@ module.exports = {
     'sort-imports': ['off'],
     'sort-keys': ['off'],
     'sort-vars': ['off'],
-    'spaced-comment': ['error', 'always'],
+    'spaced-comment': [
+      'error',
+      'always',
+      {
+        line: {
+          markers: ['/'],
+          exceptions: ['-', '+'],
+        },
+        block: {
+          markers: ['!'],
+          exceptions: ['*'],
+          balanced: true,
+        },
+      },
+    ],
     strict: ['off'],
     'symbol-description': ['error'],
     'vars-on-top': ['off'],
