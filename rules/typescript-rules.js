@@ -2,6 +2,7 @@ const typescriptRecommended = require('@typescript-eslint/eslint-plugin/dist/con
 const typescriptOverrideRules = typescriptRecommended.overrides.find(({ files }) => files.includes('*.ts')).rules
 
 const baseRules = require('./base-rules.js')
+const noAutoFixRules = require('./no-autofix-rules.js')
 
 const extendRules = [
   'brace-style',
@@ -47,11 +48,14 @@ module.exports = {
   rules: {
     // "@typescript-eslint/eslint-plugin": "5.26.0",
 
-    /* Override JS*/
+    /* Override JS */
     'no-duplicate-imports': ['off'],
 
-    /* typescriptOverrideRules*/
+    /* typescriptOverrideRules */
     ...typescriptOverrideRules,
+
+    /* no-autofix */
+    ...noAutoFixRules,
 
     /* Extend Rules */
     ...extendRules.reduce((rules, ruleName) => {

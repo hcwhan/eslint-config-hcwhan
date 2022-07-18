@@ -44,7 +44,7 @@ module.exports = {
   rules: {
     // "eslint-plugin-vue": "9.0.1",
 
-    /* Override JS*/
+    /* Override JS */
     // set here
 
     /* Extend Rules */

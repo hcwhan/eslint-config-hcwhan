@@ -1,3 +1,5 @@
+const noAutoFixRules = require('./no-autofix-rules.js')
+
 module.exports = {
   extends: ['eslint:recommended'],
   plugins: ['no-autofix'],
@@ -380,13 +382,6 @@ module.exports = {
     ],
 
     /* no-autofix */
-    'prefer-const': ['off'],
-    'no-autofix/prefer-const': [
-      'warn',
-      {
-        destructuring: 'all',
-        ignoreReadBeforeAssign: false,
-      },
-    ],
+    ...noAutoFixRules,
   },
 }
