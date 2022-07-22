@@ -183,7 +183,7 @@ module.exports = {
     'no-useless-concat': ['error'],
     'no-useless-constructor': ['off'],
     'no-useless-rename': ['error'],
-    'no-useless-return': ['error'],
+    // 'no-useless-return': [], // no-autofix
     'no-var': ['error'],
     'no-void': ['error'],
     'no-warning-comments': ['off'],
@@ -203,7 +203,7 @@ module.exports = {
     'prefer-regex-literals': ['error'],
     'prefer-rest-params': ['error'],
     'prefer-spread': ['error'],
-    'prefer-template': ['off'],
+    'prefer-template': ['warn'],
     'quote-props': [
       'error',
       'as-needed',
@@ -212,7 +212,7 @@ module.exports = {
       },
     ],
     radix: ['error', 'always'],
-    'require-await': ['error'],
+    'require-await': ['warn'],
     'require-unicode-regexp': ['off'],
     'sort-imports': ['off'],
     'sort-keys': ['off'],

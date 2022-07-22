@@ -7,4 +7,7 @@ module.exports = {
       ignoreReadBeforeAssign: false,
     },
   ],
+
+  'no-useless-return': ['off'],
+  'no-autofix/no-useless-return': ['warn'],
 }
