@@ -42,7 +42,7 @@ const extendRules = [
 module.exports = {
   extends: ['plugin:vue/vue3-recommended'],
   rules: {
-    // "eslint-plugin-vue": "9.0.1",
+    // "eslint-plugin-vue": "9.4.1",
 
     /* Override JS */
     // set here

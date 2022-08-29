@@ -4,7 +4,7 @@ module.exports = {
   extends: ['eslint:recommended'],
   plugins: ['no-autofix'],
   rules: {
-    // "eslint": "8.16.0",
+    // "eslint": "8.23.0",
 
     /* recommended change */
     'no-control-regex': ['off'],

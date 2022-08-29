@@ -46,7 +46,7 @@ const extendRules = [
 module.exports = {
   extends: ['plugin:@typescript-eslint/recommended'],
   rules: {
-    // "@typescript-eslint/eslint-plugin": "5.26.0",
+    // "@typescript-eslint/eslint-plugin": "5.35.1",
 
     /* Override JS */
     'no-duplicate-imports': ['off'],
