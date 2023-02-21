@@ -86,7 +86,7 @@ module.exports = {
     'vue/component-api-style': ['error', ['script-setup', 'composition']],
     'vue/component-name-in-template-casing': [
       'warn',
-      'PascalCase',
+      'kebab-case',
       {
         registeredComponentsOnly: false,
       },
