@@ -153,6 +153,6 @@ module.exports = {
     'vue/sort-keys': ['off'],
     'vue/static-class-names-order': ['off'],
     'vue/v-for-delimiter-style': ['warn', 'of'],
-    'vue/v-on-handler-style': ['warn', ['method', 'inline-function']],
+    'vue/v-on-handler-style': ['off'],
   },
 }
