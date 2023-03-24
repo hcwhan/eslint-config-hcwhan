@@ -75,7 +75,7 @@ module.exports = {
       },
     ],
     // '@typescript-eslint/await-thenable': ['error'], // project
-    '@typescript-eslint/ban-ts-comment': ['error', { 'ts-ignore': 'allow-with-description' }],
+    '@typescript-eslint/ban-ts-comment': ['error', { 'ts-expect-error': 'allow-with-description' }],
     '@typescript-eslint/ban-tslint-comment': ['off'],
     '@typescript-eslint/ban-types': ['off'],
     '@typescript-eslint/class-literal-property-style': ['off'],
