@@ -141,6 +141,7 @@ module.exports = {
     'vue/padding-line-between-blocks': ['warn', 'always'],
     'vue/padding-line-between-tags': ['off'],
     'vue/padding-lines-in-component-definition': ['off'],
+    'vue/prefer-define-options': ['error'],
     'vue/prefer-prop-type-boolean-first': ['error'],
     'vue/prefer-separate-static-class': ['warn'],
     'vue/prefer-true-attribute-shorthand': ['off'],
@@ -154,5 +155,6 @@ module.exports = {
     'vue/static-class-names-order': ['off'],
     'vue/v-for-delimiter-style': ['warn', 'of'],
     'vue/v-on-handler-style': ['off'],
+    'vue/valid-define-options': ['error'],
   },
 }
