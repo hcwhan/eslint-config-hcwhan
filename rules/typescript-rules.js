@@ -1,5 +1,27 @@
-const typescriptRecommended = require('@typescript-eslint/eslint-plugin/dist/configs/eslint-recommended')
-const typescriptOverrideRules = typescriptRecommended.overrides.find(({ files }) => files.includes('*.ts')).rules
+// const typescriptRecommended = require('@typescript-eslint/eslint-plugin/dist/configs/eslint-recommended')
+// const typescriptOverrideRules = typescriptRecommended.overrides.find(({ files }) => files.includes('*.ts')).rules
+const typescriptOverrideRules = {
+  'constructor-super': 'off',
+  'getter-return': 'off',
+  'no-const-assign': 'off',
+  'no-dupe-args': 'off',
+  'no-dupe-class-members': 'off',
+  'no-dupe-keys': 'off',
+  'no-func-assign': 'off',
+  'no-import-assign': 'off',
+  'no-new-symbol': 'off',
+  'no-obj-calls': 'off',
+  'no-redeclare': 'off',
+  'no-setter-return': 'off',
+  'no-this-before-super': 'off',
+  'no-undef': 'off',
+  'no-unreachable': 'off',
+  'no-unsafe-negation': 'off',
+  'no-var': 'error',
+  'prefer-const': 'error',
+  'prefer-rest-params': 'error',
+  'prefer-spread': 'error',
+}
 
 const baseRules = require('./base-rules.js')
 const noAutoFixRules = require('./no-autofix-rules.js')
@@ -152,7 +174,7 @@ module.exports = {
     '@typescript-eslint/prefer-literal-enum-member': ['off'],
     '@typescript-eslint/prefer-namespace-keyword': ['off'],
     '@typescript-eslint/prefer-nullish-coalescing': ['off'],
-    '@typescript-eslint/prefer-optional-chain': ['warn'],
+    // '@typescript-eslint/prefer-optional-chain': ['warn'], // project
     '@typescript-eslint/prefer-readonly': ['off'],
     '@typescript-eslint/prefer-readonly-parameter-types': ['off'],
     '@typescript-eslint/prefer-reduce-type-parameter': ['off'],
