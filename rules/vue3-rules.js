@@ -95,7 +95,7 @@ module.exports = {
     'vue/custom-event-name-casing': ['warn', 'camelCase'],
     'vue/define-emits-declaration': ['warn', 'runtime'],
     'vue/define-macros-order': ['warn', { order: ['defineProps', 'defineEmits'] }],
-    'vue/define-props-declaration': ['warn', 'runtime'],
+    // 'vue/define-props-declaration': ['warn', "type-based" | 'runtime'], // TODO
     'vue/html-button-has-type': ['off'],
     'vue/html-comment-content-newline': ['off'],
     'vue/html-comment-content-spacing': ['warn', 'always'],
