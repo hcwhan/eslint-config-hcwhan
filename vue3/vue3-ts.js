@@ -6,14 +6,12 @@ module.exports = {
     ...TypescriptConfig.overrides,
     {
       files: ['*.vue'],
-      extends: ['../rules/typescript-rules.js', '../rules/vue3-rules.js', 'plugin:prettier/recommended'],
+      extends: ['../rules/typescript-rules.js', '../rules/vue3-rules.js'],
       parser: 'vue-eslint-parser',
       parserOptions: {
         parser: '@typescript-eslint/parser',
       },
       rules: {
-        'prettier/prettier': ['warn'],
-
         'vue/block-lang': [
           'error',
           {

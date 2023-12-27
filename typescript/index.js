@@ -3,10 +3,8 @@ module.exports = {
   overrides: [
     {
       files: ['*.ts'],
-      extends: ['../rules/typescript-rules.js', 'plugin:prettier/recommended'],
-      rules: {
-        'prettier/prettier': ['warn'],
-      },
+      extends: ['../rules/typescript-rules.js'],
+      rules: {},
     },
   ],
 }

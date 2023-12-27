@@ -3,11 +3,9 @@ module.exports = {
   overrides: [
     {
       files: ['*.vue'],
-      extends: ['../rules/vue3-rules.js', 'plugin:prettier/recommended'],
+      extends: ['../rules/vue3-rules.js'],
       parser: 'vue-eslint-parser',
       rules: {
-        'prettier/prettier': ['warn'],
-
         'vue/block-lang': [
           'error',
           {
