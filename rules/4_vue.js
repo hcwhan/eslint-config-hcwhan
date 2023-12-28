@@ -145,7 +145,7 @@ module.exports = {
     'vue/prefer-define-options': ['error'],
     'vue/prefer-prop-type-boolean-first': ['error'],
     'vue/prefer-separate-static-class': ['warn'],
-    'vue/prefer-true-attribute-shorthand': ['warn', 'never'],
+    'vue/prefer-true-attribute-shorthand': ['warn', 'always'],
     'vue/require-direct-export': ['warn'],
     'vue/require-emit-validator': ['error'],
     'vue/require-expose': ['warn'],
@@ -159,7 +159,7 @@ module.exports = {
     'vue/static-class-names-order': ['off'],
     'vue/v-for-delimiter-style': ['warn', 'of'],
     'v-if-else-key': ['off'],
-    'vue/v-on-handler-style': ['warn', ['method', 'inline-function']],
+    'vue/v-on-handler-style': ['off'],
     'vue/valid-define-options': ['error'],
   },
 }
