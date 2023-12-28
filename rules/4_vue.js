@@ -4,7 +4,6 @@ const baseExtendRules = [
   'camelcase',
   'dot-notation',
   'eqeqeq',
-  'max-len',
   'no-console',
   'no-constant-condition',
   'no-empty-pattern',
@@ -30,6 +29,7 @@ const stylisticExtendRules = [
   'func-call-spacing',
   'key-spacing',
   'keyword-spacing',
+  'max-len',
   'multiline-ternary',
   'no-extra-parens',
   'object-curly-newline',
@@ -75,6 +75,15 @@ module.exports = {
     'vue/attribute-hyphenation': ['warn', 'never'],
     'vue/require-v-for-key': ['off'],
     'vue/valid-v-for': ['off'],
+    'vue/html-self-closing': ['warn', {
+      html: {
+        void: 'always',
+        normal: 'never',
+        component: 'never',
+      },
+      svg: 'never',
+      math: 'never',
+    }],
 
     /* Uncategorized */
     'vue/block-lang': ['error', { script: { allowNoLang: false, lang: 'ts' } }],
@@ -123,7 +132,7 @@ module.exports = {
     // 'vue/no-undef-components': ['warn', { ignorePatterns: ['el(\\-\\w+)+'] }], // 禁止使用未定义的组件
     'vue/no-undef-properties': ['warn'],
     'vue/no-unsupported-features': ['off'],
-    'vue/no-unused-emit-declarations': ['warn'],
+    'vue/no-unused-emit-declarations': ['off'],
     'vue/no-unused-properties': ['warn'], // 禁止声明未使用的 props
     'vue/no-unused-refs': ['warn'],
     'no-use-v-else-with-v-for': ['off'],
@@ -150,7 +159,7 @@ module.exports = {
     'vue/static-class-names-order': ['off'],
     'vue/v-for-delimiter-style': ['warn', 'of'],
     'v-if-else-key': ['off'],
-    'vue/v-on-handler-style': ['error', ['method', 'inline-function']],
+    'vue/v-on-handler-style': ['warn', ['method', 'inline-function']],
     'vue/valid-define-options': ['error'],
   },
 }

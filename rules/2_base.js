@@ -204,6 +204,7 @@ module.exports = {
 
     /* stylistic */
     ...stylistic.rules,
+    'no-extra-semi': ['off'],
 
     /* noAutoFix */
     ...noAutoFix.rules,

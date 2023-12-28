@@ -22,8 +22,8 @@ module.exports = {
     es2023: true,
   },
   parserOptions: {
-    ecmaVersion: 2023,
     sourceType: 'module',
+    ecmaVersion: 2023,
   },
   globals: {
     document: 'readonly',
@@ -45,6 +45,7 @@ module.exports = {
       parser: 'vue-eslint-parser',
       parserOptions: {
         parser: '@typescript-eslint/parser',
+        ecmaVersion: 2023,
       },
       rules: {},
     },

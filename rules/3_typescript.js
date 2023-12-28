@@ -109,7 +109,7 @@ module.exports = {
     '@typescript-eslint/no-meaningless-void-operator': ['off'],
     '@typescript-eslint/no-misused-new': ['error'],
     '@typescript-eslint/no-misused-promises': ['off'],
-    '@typescript-eslint/no-mixed-enums': ['error'],
+    // '@typescript-eslint/no-mixed-enums': ['error'], // project
     '@typescript-eslint/no-namespace': ['off'],
     '@typescript-eslint/no-non-null-asserted-nullish-coalescing': ['error'],
     '@typescript-eslint/no-non-null-asserted-optional-chain': ['error'],
@@ -127,12 +127,12 @@ module.exports = {
     '@typescript-eslint/no-unsafe-assignment': ['off'],
     '@typescript-eslint/no-unsafe-call': ['off'],
     '@typescript-eslint/no-unsafe-declaration-merging': ['error'],
-    '@typescript-eslint/no-unsafe-enum-comparison': ['error'],
+    // '@typescript-eslint/no-unsafe-enum-comparison': ['error'], // project
     '@typescript-eslint/no-unsafe-member-access': ['off'],
     '@typescript-eslint/no-unsafe-return': ['off'],
-    '@typescript-eslint/no-unsafe-unary-minus': ['error'],
+    // '@typescript-eslint/no-unsafe-unary-minus': ['error'], // project
     '@typescript-eslint/no-useless-empty-export': ['off'],
-    '@typescript-eslint/no-useless-template-literals': ['error'],
+    // '@typescript-eslint/no-useless-template-literals': ['error'], // project
     '@typescript-eslint/no-var-requires': ['off'],
     // '@typescript-eslint/non-nullable-type-assertion-style': ['warn'], // project
     '@typescript-eslint/parameter-properties': ['off'],

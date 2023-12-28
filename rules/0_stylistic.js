@@ -34,7 +34,7 @@ module.exports = {
     '@stylistic/multiline-ternary': ['off'],
     '@stylistic/new-parens': ['warn', 'always'],
     '@stylistic/newline-per-chained-call': ['off'],
-    '@stylistic/no-confusing-arrow': ['error', { allowParens: true }],
+    '@stylistic/no-confusing-arrow': ['warn', { allowParens: true }],
     '@stylistic/no-extra-parens': ['off'],
     '@stylistic/no-extra-semi': ['warn'],
     '@stylistic/no-floating-decimal': ['warn'],
@@ -53,7 +53,7 @@ module.exports = {
     '@stylistic/operator-linebreak': ['warn', 'after', { overrides: { '?': 'before', ':': 'before' } }],
     '@stylistic/padded-blocks': ['off'],
     '@stylistic/padding-line-between-statements': ['off'],
-    '@stylistic/quote-props': ['error', 'as-needed', { numbers: true }],
+    '@stylistic/quote-props': ['warn', 'as-needed', { numbers: false }],
     '@stylistic/quotes': ['warn', 'single'],
     '@stylistic/rest-spread-spacing': ['warn', 'never'],
     '@stylistic/semi': ['warn', 'never'],
@@ -65,7 +65,7 @@ module.exports = {
     '@stylistic/space-infix-ops': ['warn'],
     '@stylistic/space-unary-ops': ['warn', { words: true, nonwords: false }],
     '@stylistic/spaced-comment': [
-      'error',
+      'warn',
       'always',
       {
         line: {
@@ -109,7 +109,7 @@ module.exports = {
 
     /* typescript */
     '@stylistic/member-delimiter-style': [
-      'error',
+      'warn',
       {
         multiline: {
           delimiter: 'none',
