@@ -42,6 +42,10 @@ module.exports = {
     {
       files: ['*.vue'],
       extends: ['./rules/3_typescript.js', './rules/4_vue.js'],
+      parser: 'vue-eslint-parser',
+      parserOptions: {
+        parser: '@typescript-eslint/parser',
+      },
       rules: {},
     },
   ],
