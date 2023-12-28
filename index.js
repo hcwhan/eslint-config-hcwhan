@@ -19,10 +19,10 @@ module.exports = {
   env: {
     browser: true,
     node: true,
-    es2022: true,
+    es2023: true,
   },
   parserOptions: {
-    ecmaVersion: 2022,
+    ecmaVersion: 2023,
     sourceType: 'module',
   },
   globals: {
@@ -31,7 +31,18 @@ module.exports = {
     window: 'readonly',
   },
   plugins: [],
-  extends: ['../rules/base-rules.js'],
+  extends: ['./rules/2_base.js'],
   rules: {},
-  overrides: [],
+  overrides: [
+    {
+      files: ['*.ts', '*.tsx', '*.mts', '*.cts'],
+      extends: ['./rules/3_typescript.js'],
+      rules: {},
+    },
+    {
+      files: ['*.vue'],
+      extends: ['./rules/3_typescript.js', './rules/4_vue.js'],
+      rules: {},
+    },
+  ],
 }

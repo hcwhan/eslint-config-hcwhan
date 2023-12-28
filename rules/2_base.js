@@ -1,28 +1,17 @@
-const noAutoFixRules = require('./no-autofix-rules.js')
+const stylistic = require('./0_stylistic.js')
+const noAutoFix = require('./1_noAutoFix.js')
 
 module.exports = {
   extends: ['eslint:recommended'],
-  plugins: ['no-autofix'],
+  plugins: [...stylistic.plugins, ...noAutoFix.plugins],
   rules: {
-    // "eslint": "8.23.0",
+    // "eslint": "8.56.0",
 
     /* recommended change */
     'no-control-regex': ['off'],
     'no-debugger': ['warn'],
-    'no-constant-condition': [
-      'error',
-      {
-        checkLoops: false,
-      },
-    ],
-    'no-unused-vars': [
-      'warn',
-      {
-        args: 'after-used',
-        argsIgnorePattern: '^_',
-        destructuredArrayIgnorePattern: '^_',
-      },
-    ],
+    'no-constant-condition': ['error', { checkLoops: false }],
+    'no-unused-vars': ['warn', { args: 'after-used', argsIgnorePattern: '^_', destructuredArrayIgnorePattern: '^_' }],
 
     /* Possible Problems */
     'array-callback-return': ['error'],
@@ -41,13 +30,7 @@ module.exports = {
     'require-atomic-updates': ['off'],
 
     /* Suggestions */
-    'accessor-pairs': [
-      'error',
-      {
-        setWithoutGet: true,
-        getWithoutSet: true,
-      },
-    ],
+    'accessor-pairs': ['error', { setWithoutGet: true, getWithoutSet: true }],
     'arrow-body-style': ['off'],
     'block-scoped-var': ['error'],
     camelcase: ['off'],
@@ -85,7 +68,7 @@ module.exports = {
     'no-array-constructor': ['error'],
     'no-bitwise': ['off'],
     'no-caller': ['error'],
-    'no-confusing-arrow': ['error', { allowParens: true }],
+    // 'no-confusing-arrow': [], // stylistic
     'no-console': ['warn', { allow: ['info', 'warn', 'error'] }],
     'no-continue': ['off'],
     'no-div-regex': ['off'],
@@ -107,6 +90,7 @@ module.exports = {
     'no-label-var': ['error'],
     'no-labels': ['error'],
     'no-lone-blocks': ['error'],
+    'no-lonely-if': ['warn'],
     'no-loop-func': ['error'],
     'no-magic-numbers': ['off'],
     'no-mixed-operators': [
@@ -174,28 +158,22 @@ module.exports = {
     'no-undefined': ['off'],
     'no-underscore-dangle': ['off'],
     'no-unneeded-ternary': ['error'],
-    'no-unused-expressions': [
-      'error',
-      {
-        allowShortCircuit: true,
-        allowTernary: true,
-      },
-    ],
+    'no-unused-expressions': ['error', { allowShortCircuit: true, allowTernary: true }],
     'no-useless-call': ['error'],
     'no-useless-computed-key': ['error'],
     'no-useless-concat': ['error'],
     'no-useless-constructor': ['off'],
     'no-useless-rename': ['error'],
-    // 'no-useless-return': [], // no-autofix
+    // 'no-useless-return': [], // noAutoFix
     'no-var': ['error'],
     'no-void': ['error'],
     'no-warning-comments': ['off'],
     'object-shorthand': ['error', 'always'],
     'one-var': ['off'],
-    'one-var-declaration-per-line': ['off'],
+    // 'one-var-declaration-per-line': [], // stylistic
     'operator-assignment': ['error'],
     'prefer-arrow-callback': ['error'],
-    // 'prefer-const': [], // no-autofix
+    // 'prefer-const': [], // noAutoFix
     'prefer-destructuring': ['off'],
     'prefer-exponentiation-operator': ['error'],
     'prefer-named-capture-group': ['off'],
@@ -207,184 +185,27 @@ module.exports = {
     'prefer-rest-params': ['error'],
     'prefer-spread': ['error'],
     'prefer-template': ['warn'],
-    'quote-props': [
-      'error',
-      'as-needed',
-      {
-        numbers: true,
-      },
-    ],
+    // 'quote-props': [], // stylistic
     radix: ['error', 'always'],
     'require-await': ['warn'],
     'require-unicode-regexp': ['off'],
     'sort-imports': ['off'],
     'sort-keys': ['off'],
     'sort-vars': ['off'],
-    'spaced-comment': [
-      'error',
-      'always',
-      {
-        line: {
-          markers: ['/'],
-          exceptions: ['-', '+'],
-        },
-        block: {
-          markers: ['!'],
-          exceptions: ['*'],
-          balanced: true,
-        },
-      },
-    ],
+    // 'spaced-comment': [], // stylistic
     strict: ['off'],
     'symbol-description': ['error'],
     'vars-on-top': ['off'],
     yoda: ['error', 'never'],
 
     /* Layout & Formatting */
-    'array-bracket-newline': ['warn', 'consistent'],
-    'array-bracket-spacing': ['warn', 'never'],
-    'array-element-newline': ['off'],
-    'arrow-parens': ['warn', 'always'],
-    'arrow-spacing': [
-      'warn',
-      {
-        before: true,
-        after: true,
-      },
-    ],
-    'block-spacing': ['warn', 'always'],
-    'brace-style': ['warn', '1tbs', { allowSingleLine: true }],
-    'comma-dangle': ['warn', 'always-multiline'],
-    'comma-spacing': [
-      'warn',
-      {
-        before: false,
-        after: true,
-      },
-    ],
-    'comma-style': ['warn', 'last'],
-    'computed-property-spacing': ['warn', 'never'],
-    'dot-location': ['warn', 'property'],
-    'eol-last': ['warn', 'always'],
-    'func-call-spacing': ['warn', 'never'],
-    'function-call-argument-newline': ['warn', 'consistent'],
-    'function-paren-newline': ['warn', 'multiline-arguments'],
-    'generator-star-spacing': [
-      'warn',
-      {
-        before: true,
-        after: true,
-      },
-    ],
-    'implicit-arrow-linebreak': ['warn', 'beside'],
-    indent: ['warn', 2, { SwitchCase: 1, offsetTernaryExpressions: true }],
-    'jsx-quotes': ['warn', 'prefer-double'],
-    'key-spacing': [
-      'warn',
-      {
-        beforeColon: false,
-        afterColon: true,
-        mode: 'strict',
-      },
-    ],
-    'keyword-spacing': [
-      'warn',
-      {
-        before: true,
-        after: true,
-      },
-    ],
     'line-comment-position': ['off'],
-    'linebreak-style': ['warn', 'unix'],
-    'lines-around-comment': ['off'],
-    'lines-between-class-members': ['warn', 'always'],
-    'max-len': ['off'],
-    'max-statements-per-line': ['warn', { max: 3 }],
-    'multiline-ternary': ['off'],
-    'new-parens': ['warn', 'always'],
-    'newline-per-chained-call': ['off'],
-    'no-extra-parens': ['off'],
-    'no-multi-spaces': ['warn'],
-    'no-multiple-empty-lines': [
-      'warn',
-      {
-        max: 3,
-        maxEOF: 1,
-        maxBOF: 1,
-      },
-    ],
-    'no-tabs': ['warn'],
-    'no-trailing-spaces': ['warn'],
-    'no-whitespace-before-property': ['warn'],
-    'nonblock-statement-body-position': ['warn'],
-    'object-curly-newline': [
-      'warn',
-      {
-        consistent: true,
-      },
-    ],
-    'object-curly-spacing': ['warn', 'always'],
-    'object-property-newline': ['off'],
-    'operator-linebreak': ['warn', 'after', { overrides: { '?': 'before', ':': 'before' } }],
-    'padded-blocks': ['off'],
-    'padding-line-between-statements': ['off'],
-    quotes: ['warn', 'single'],
-    'rest-spread-spacing': ['warn', 'never'],
-    semi: ['warn', 'never'],
-    'semi-spacing': [
-      'warn',
-      {
-        before: false,
-        after: true,
-      },
-    ],
-    'semi-style': ['warn', 'last'],
-    'space-before-blocks': ['warn'],
-    'space-before-function-paren': [
-      'warn',
-      {
-        anonymous: 'always',
-        named: 'never',
-        asyncArrow: 'always',
-      },
-    ],
-    'space-in-parens': ['warn', 'never'],
-    'space-infix-ops': ['warn'],
-    'space-unary-ops': [
-      'warn',
-      {
-        words: true,
-        nonwords: false,
-      },
-    ],
-    'no-lonely-if': ['off'],
-    'switch-colon-spacing': [
-      'warn',
-      {
-        before: false,
-        after: true,
-      },
-    ],
-    'template-curly-spacing': ['warn', 'never'],
-    'template-tag-spacing': ['warn', 'never'],
     'unicode-bom': ['warn', 'never'],
-    'wrap-iife': [
-      'warn',
-      'inside',
-      {
-        functionPrototypeMethods: true,
-      },
-    ],
-    'wrap-regex': ['off'],
-    'yield-star-spacing': [
-      'warn',
-      {
-        before: true,
-        after: true,
-      },
-    ],
 
-    /* no-autofix */
-    ...noAutoFixRules,
+    /* stylistic */
+    ...stylistic.rules,
+
+    /* noAutoFix */
+    ...noAutoFix.rules,
   },
 }
