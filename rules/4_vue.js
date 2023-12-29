@@ -65,7 +65,6 @@ module.exports = {
     // Priority A: Essential
     'vue/multi-word-component-names': ['off'],
     'vue/no-mutating-props': ['error', { shallowOnly: true }],
-    'vue/require-v-for-key': ['off'],
     'vue/valid-template-root': ['off'],
     // Priority B: Strongly Recommended
     'vue/attribute-hyphenation': ['warn', 'never'],
