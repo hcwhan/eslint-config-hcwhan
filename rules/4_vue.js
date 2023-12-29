@@ -67,7 +67,6 @@ module.exports = {
     'vue/no-mutating-props': ['error', { shallowOnly: true }],
     'vue/require-v-for-key': ['off'],
     'vue/valid-template-root': ['off'],
-    // 'vue/valid-v-for': ['off'],
     // Priority B: Strongly Recommended
     'vue/attribute-hyphenation': ['warn', 'never'],
     'vue/html-self-closing': ['warn', { html: { void: 'always', normal: 'never', component: 'never' }, svg: 'never', math: 'never' }],
