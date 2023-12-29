@@ -62,28 +62,22 @@ module.exports = {
     }, {}),
 
     /* vue3-recommended change */
-    'vue/no-mutating-props': ['off'],
-    'vue/no-v-text-v-html-on-component': ['off'],
+    // Priority A: Essential
+    'vue/multi-word-component-names': ['off'],
+    'vue/no-mutating-props': ['error', { shallowOnly: true }],
+    'vue/require-v-for-key': ['off'],
     'vue/valid-template-root': ['off'],
+    // 'vue/valid-v-for': ['off'],
+    // Priority B: Strongly Recommended
+    'vue/attribute-hyphenation': ['warn', 'never'],
+    'vue/html-self-closing': ['warn', { html: { void: 'always', normal: 'never', component: 'never' }, svg: 'never', math: 'never' }],
     'vue/max-attributes-per-line': ['off'],
+    'vue/singleline-html-element-content-newline': ['off'],
+    // Priority B: Strongly Recommended for Vue.js 3.x
     'vue/v-on-event-hyphenation': ['warn', 'never', { autofix: true }],
-    'vue/component-tags-order': ['warn', { order: ['template', 'script[setup]', 'script:not([setup])', 'style'] }],
+    // Priority C: Recommended
     'vue/no-v-html': ['off'],
 
-    'vue/singleline-html-element-content-newline': ['off'],
-    'vue/multi-word-component-names': ['off'],
-    'vue/attribute-hyphenation': ['warn', 'never'],
-    'vue/require-v-for-key': ['off'],
-    'vue/valid-v-for': ['off'],
-    'vue/html-self-closing': ['warn', {
-      html: {
-        void: 'always',
-        normal: 'never',
-        component: 'never',
-      },
-      svg: 'never',
-      math: 'never',
-    }],
 
     /* Uncategorized */
     'vue/block-lang': ['error', { script: { allowNoLang: false, lang: 'ts' } }],

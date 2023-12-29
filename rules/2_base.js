@@ -90,7 +90,7 @@ module.exports = {
     'no-label-var': ['error'],
     'no-labels': ['error'],
     'no-lone-blocks': ['error'],
-    'no-lonely-if': ['warn'],
+    'no-lonely-if': ['off'],
     'no-loop-func': ['error'],
     'no-magic-numbers': ['off'],
     'no-mixed-operators': [
@@ -203,8 +203,11 @@ module.exports = {
     'unicode-bom': ['warn', 'never'],
 
     /* stylistic */
+    ...Object.keys(stylistic.rules).reduce((rules, ruleName) => {
+      rules[ruleName.slice('@stylistic/'.length)] = ['off']
+      return rules
+    }, {}),
     ...stylistic.rules,
-    'no-extra-semi': ['off'],
 
     /* noAutoFix */
     ...noAutoFix.rules,
