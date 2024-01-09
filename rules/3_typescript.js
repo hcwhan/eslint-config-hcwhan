@@ -20,7 +20,7 @@ const typescriptOverrideRules = {
   'no-unreachable': 'off',
   'no-unsafe-negation': 'off',
   'no-var': 'error',
-  'prefer-const': 'error',
+  'prefer-const': 'off', // noAutoFix
   'prefer-rest-params': 'error',
   'prefer-spread': 'error',
 }

@@ -78,7 +78,7 @@
       "error"
     ],
     "prefer-const": [
-      "error"
+      "off"
     ],
     "prefer-rest-params": [
       "error"
