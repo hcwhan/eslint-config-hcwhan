@@ -1,8 +1,9 @@
 {
   "name": "eslint-config-hcwhan",
-  "version": "0.8.6",
+  "version": "0.8.7",
   "description": "",
   "scripts": {
+    "config": "eslint --print-config 1.js > ./config/1.js.json && eslint --print-config 2.ts > ./config/2.ts.json && eslint --print-config 3.vue > ./config/3.vue.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

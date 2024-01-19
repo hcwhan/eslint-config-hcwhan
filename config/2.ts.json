@@ -172,7 +172,8 @@
           "close",
           "confirm",
           "Option",
-          "level"
+          "level",
+          "error"
         ],
         "ignoreOnInitialization": true
       }
@@ -197,7 +198,8 @@
           "close",
           "confirm",
           "Option",
-          "level"
+          "level",
+          "error"
         ],
         "ignoreOnInitialization": true
       }

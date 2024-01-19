@@ -148,6 +148,7 @@ module.exports = {
           'confirm',
           'Option',
           'level',
+          'error',
         ],
         ignoreOnInitialization: true,
       },
