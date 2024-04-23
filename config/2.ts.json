@@ -1311,8 +1311,7 @@
       "off"
     ],
     "@stylistic/lines-between-class-members": [
-      "warn",
-      "always"
+      "off"
     ],
     "@stylistic/max-len": [
       "off"

@@ -28,7 +28,7 @@ module.exports = {
     '@stylistic/keyword-spacing': ['warn', { before: true, after: true }],
     '@stylistic/linebreak-style': ['warn', 'unix'],
     '@stylistic/lines-around-comment': ['off'],
-    '@stylistic/lines-between-class-members': ['warn', 'always'],
+    '@stylistic/lines-between-class-members': ['off'],
     '@stylistic/max-len': ['off'],
     '@stylistic/max-statements-per-line': ['warn', { max: 3 }],
     '@stylistic/multiline-ternary': ['off'],
