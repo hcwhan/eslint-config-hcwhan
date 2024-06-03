@@ -1,53 +1,65 @@
-module.exports = {
-  ignorePatterns: [
-    '*.min.*',
-    'CHANGELOG.md',
-    'dist',
-    'LICENSE*',
-    'output',
-    'coverage',
-    'public',
-    'temp',
-    'packages-lock.json',
-    'pnpm-lock.yaml',
-    'yarn.lock',
-    '__snapshots__',
-    '!.github',
-    '!.vitepress',
-    '!.vscode',
-  ],
-  env: {
-    browser: true,
-    node: true,
-    es2023: true,
-  },
-  parserOptions: {
-    sourceType: 'module',
-    ecmaVersion: 2023,
-  },
-  globals: {
-    document: 'readonly',
-    navigator: 'readonly',
-    window: 'readonly',
-  },
-  plugins: [],
-  extends: ['./rules/2_base.js'],
-  rules: {},
-  overrides: [
+
+import antfu from '@antfu/eslint-config'
+import noAutofix from 'eslint-plugin-no-autofix'
+
+import baseRules from './rules/base.js'
+import stylisticRules from './rules/stylistic.js'
+
+import typescriptRules from './rules/typescript.js'
+import vueRules from './rules/vue.js'
+
+
+const hcwhan = (config = {}) => {
+  const { ignores } = config
+
+  return antfu(
     {
-      files: ['*.ts', '*.tsx', '*.mts', '*.cts'],
-      extends: ['./rules/3_typescript.js'],
-      rules: {},
-    },
-    {
-      files: ['*.vue'],
-      extends: ['./rules/3_typescript.js', './rules/4_vue.js'],
-      parser: 'vue-eslint-parser',
-      parserOptions: {
-        parser: '@typescript-eslint/parser',
-        ecmaVersion: 2023,
+      ignores,
+
+      formatters: {
+        css: true,
+        html: true,
+        markdown: 'prettier',
       },
-      rules: {},
+
+      unocss: true,
+
+      plugins: {
+        'no-autofix': noAutofix,
+      },
+
+      rules: {
+        ...baseRules,
+
+        'prefer-const': ['off'],
+        'no-autofix/prefer-const': ['warn', { destructuring: 'all', ignoreReadBeforeAssign: false }],
+        'no-useless-return': ['off'],
+        'no-autofix/no-useless-return': ['warn'],
+
+        'antfu/top-level-function': ['off'],
+      },
+
+      stylistic: {
+        overrides: stylisticRules,
+      },
+
+      typescript: true,
+      vue: true,
     },
-  ],
+    {
+      files: ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.cts'],
+      rules: {
+        ...typescriptRules,
+      },
+    },
+    {
+      files: ['**/*.vue'],
+      rules: {
+        ...typescriptRules,
+        ...vueRules,
+      },
+    },
+  )
 }
+
+export default hcwhan
