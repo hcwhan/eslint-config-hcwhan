@@ -3798,8 +3798,7 @@
       2
     ],
     "vue/prefer-true-attribute-shorthand": [
-      1,
-      "always"
+      0
     ],
     "vue/require-direct-export": [
       1

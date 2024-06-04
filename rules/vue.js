@@ -140,7 +140,7 @@ const vueRules = {
   'vue/prefer-define-options': ['error'],
   'vue/prefer-prop-type-boolean-first': ['error'],
   'vue/prefer-separate-static-class': ['warn'],
-  'vue/prefer-true-attribute-shorthand': ['warn', 'always'],
+  'vue/prefer-true-attribute-shorthand': ['off'],
   'vue/require-direct-export': ['warn'],
   'vue/require-emit-validator': ['error'],
   'vue/require-expose': ['warn'],
