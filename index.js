@@ -10,7 +10,7 @@ import vueRules from './rules/vue.js'
 
 
 const hcwhan = (config = {}) => {
-  const { ignores } = config
+  const { ignores, unocss } = config
 
   return antfu(
     {
@@ -22,7 +22,7 @@ const hcwhan = (config = {}) => {
         markdown: 'prettier',
       },
 
-      unocss: true,
+      unocss,
 
       plugins: {
         'no-autofix': noAutofix,
@@ -37,6 +37,7 @@ const hcwhan = (config = {}) => {
         'no-autofix/no-useless-return': ['warn'],
 
         'antfu/top-level-function': ['off'],
+        'unicorn/prefer-number-properties': ['warn', { checkNaN: false }],
       },
 
       stylistic: {

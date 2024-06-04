@@ -1238,7 +1238,6 @@
     "regexp:eslint-plugin-regexp@2.6.0",
     "test:vitest@0.5.3",
     "vue:eslint-plugin-vue@9.26.0",
-    "unocss",
     "jsonc:eslint-plugin-jsonc@2.16.0",
     "yaml:eslint-plugin-yml@1.14.0",
     "toml:eslint-plugin-toml@0.11.0",
@@ -1854,7 +1853,11 @@
       2
     ],
     "unicorn/prefer-number-properties": [
-      2
+      1,
+      {
+        "checkNaN": false,
+        "checkInfinity": false
+      }
     ],
     "unicorn/prefer-string-starts-ends-with": [
       2
@@ -3185,12 +3188,6 @@
     "vue/template-curly-spacing": [
       1,
       "never"
-    ],
-    "unocss/order": [
-      1
-    ],
-    "unocss/order-attributify": [
-      1
     ],
     "no-constant-condition": [
       2,
