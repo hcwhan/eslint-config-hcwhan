@@ -1,6 +1,6 @@
 
 const stylisticRules = {
-  // "@stylistic/eslint-plugin": "1.5.1",
+  // "@stylistic/eslint-plugin": "2.1.0",
 
   'style/array-bracket-newline': ['warn', 'consistent'],
   'style/array-bracket-spacing': ['warn', 'never'],
@@ -25,11 +25,27 @@ const stylisticRules = {
   'style/indent-binary-ops': ['warn', 2],
   'style/key-spacing': ['warn', { beforeColon: false, afterColon: true, mode: 'strict' }],
   'style/keyword-spacing': ['warn', { before: true, after: true }],
+  'style/line-comment-position': ['off'],
   'style/linebreak-style': ['warn', 'unix'],
   'style/lines-around-comment': ['off'],
   'style/lines-between-class-members': ['off'],
   'style/max-len': ['off'],
   'style/max-statements-per-line': ['warn', { max: 3 }],
+  'style/member-delimiter-style': [
+    'warn',
+    {
+      multiline: {
+        delimiter: 'none',
+        requireLast: true,
+      },
+      singleline: {
+        delimiter: 'semi',
+        requireLast: false,
+      },
+      multilineDetection: 'brackets',
+    },
+  ],
+  'style/multiline-comment-style': ['off'],
   'style/multiline-ternary': ['off'],
   'style/new-parens': ['warn', 'always'],
   'style/newline-per-chained-call': ['off'],
@@ -81,6 +97,9 @@ const stylisticRules = {
   'style/switch-colon-spacing': ['warn', { before: false, after: true }],
   'style/template-curly-spacing': ['warn', 'never'],
   'style/template-tag-spacing': ['warn', 'never'],
+  'style/type-annotation-spacing': ['warn'],
+  'style/type-generic-spacing': ['warn'],
+  'style/type-named-tuple-spacing': ['warn'],
   'style/wrap-iife': ['warn', 'inside', { functionPrototypeMethods: true }],
   'style/wrap-regex': ['off'],
   'style/yield-star-spacing': ['warn', { before: true, after: true }],
@@ -105,25 +124,6 @@ const stylisticRules = {
   'style/jsx-sort-props': ['off'],
   'style/jsx-tag-spacing': ['off'],
   'style/jsx-wrap-multilines': ['off'],
-
-  /* typescript */
-  'style/member-delimiter-style': [
-    'warn',
-    {
-      multiline: {
-        delimiter: 'none',
-        requireLast: true,
-      },
-      singleline: {
-        delimiter: 'semi',
-        requireLast: false,
-      },
-      multilineDetection: 'brackets',
-    },
-  ],
-  'style/type-annotation-spacing': ['warn'],
-  'style/type-generic-spacing': ['warn'],
-  'style/type-named-tuple-spacing': ['warn'],
 }
 
 export default stylisticRules
