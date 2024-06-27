@@ -38,6 +38,8 @@ const hcwhan = (config = {}) => {
 
         'antfu/top-level-function': ['off'],
         'unicorn/prefer-number-properties': ['warn', { checkNaN: false }],
+        'unused-imports/no-unused-imports': ['warn'],
+        'unused-imports/no-unused-vars': ['warn', baseRules['no-unused-vars'][1]],
       },
 
       stylistic: {

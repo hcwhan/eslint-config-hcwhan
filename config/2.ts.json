@@ -1659,16 +1659,14 @@
       "never"
     ],
     "unused-imports/no-unused-imports": [
-      2
+      1
     ],
     "unused-imports/no-unused-vars": [
-      2,
+      1,
       {
         "args": "after-used",
         "argsIgnorePattern": "^_",
-        "ignoreRestSiblings": true,
-        "vars": "all",
-        "varsIgnorePattern": "^_"
+        "destructuredArrayIgnorePattern": "^_"
       }
     ],
     "use-isnan": [
@@ -2359,6 +2357,9 @@
       1,
       "beside"
     ],
+    "style/line-comment-position": [
+      0
+    ],
     "style/linebreak-style": [
       1,
       "unix"
@@ -2367,6 +2368,9 @@
       0
     ],
     "style/max-len": [
+      0
+    ],
+    "style/multiline-comment-style": [
       0
     ],
     "style/newline-per-chained-call": [
