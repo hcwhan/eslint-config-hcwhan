@@ -50,6 +50,12 @@ const hcwhan = (config = {}) => {
       vue: true,
     },
     {
+      files: ['**/tsconfig.json'],
+      rules: {
+        'jsonc/sort-keys': ['off'],
+      },
+    },
+    {
       files: ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.cts'],
       rules: {
         ...typescriptRules,
