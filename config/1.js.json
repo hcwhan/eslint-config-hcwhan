@@ -1725,7 +1725,7 @@
     ],
     "node/prefer-global/process": [
       2,
-      "never"
+      "always"
     ],
     "node/process-exit-as-throw": [
       2

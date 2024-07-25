@@ -1730,8 +1730,8 @@
       "never"
     ],
     "node/prefer-global/process": [
-      0,
-      "never"
+      2,
+      "always"
     ],
     "node/process-exit-as-throw": [
       2
