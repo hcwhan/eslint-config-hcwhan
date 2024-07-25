@@ -1719,7 +1719,7 @@
     ],
     "node/prefer-global/buffer": [
       2,
-      "never"
+      "always"
     ],
     "node/prefer-global/process": [
       2,

@@ -37,6 +37,7 @@ const hcwhan = (config = {}) => {
         'no-autofix/no-useless-return': ['warn'],
 
         'antfu/top-level-function': ['off'],
+        'node/prefer-global/buffer': ['error', 'always'],
         'node/prefer-global/process': ['error', 'always'],
         'unicorn/prefer-number-properties': ['warn', { checkNaN: false }],
         'unused-imports/no-unused-imports': ['warn'],
