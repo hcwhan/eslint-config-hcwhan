@@ -36,6 +36,36 @@ const hcwhan = (config = {}) => {
         'no-useless-return': ['off'],
         'no-autofix/no-useless-return': ['warn'],
 
+        'import-x/order': [
+          'warn',
+          {
+            groups: [
+              'builtin',
+              'external',
+
+              'parent',
+              'index',
+              'sibling',
+              'internal',
+
+              'object',
+              'type',
+            ],
+            pathGroups: [
+              {
+                pattern: '~/**',
+                group: 'parent',
+                position: 'before',
+              },
+              {
+                pattern: '@/**',
+                group: 'parent',
+                position: 'before',
+              },
+            ],
+            'newlines-between': 'always-and-inside-groups',
+          },
+        ],
         'antfu/top-level-function': ['off'],
         'node/prefer-global/buffer': ['error', 'always'],
         'node/prefer-global/process': ['error', 'always'],

@@ -1809,7 +1809,34 @@
       2
     ],
     "import/order": [
-      2
+      1,
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "parent",
+          "index",
+          "sibling",
+          "internal",
+          "object",
+          "type"
+        ],
+        "pathGroups": [
+          {
+            "pattern": "~/**",
+            "group": "parent",
+            "position": "before"
+          },
+          {
+            "pattern": "@/**",
+            "group": "parent",
+            "position": "before"
+          }
+        ],
+        "newlines-between": "always-and-inside-groups",
+        "distinctGroup": true,
+        "warnOnUnassignedImports": false
+      }
     ],
     "import/newline-after-import": [
       2,
