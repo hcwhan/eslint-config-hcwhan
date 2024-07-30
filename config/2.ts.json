@@ -1831,7 +1831,13 @@
             "position": "before"
           }
         ],
-        "newlines-between": "always-and-inside-groups",
+        "newlines-between": "always",
+        "pathGroupsExcludedImportTypes": [
+          "builtin",
+          "external",
+          "object",
+          "type"
+        ],
         "distinctGroup": true,
         "warnOnUnassignedImports": false
       }

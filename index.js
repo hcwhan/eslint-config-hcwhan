@@ -36,7 +36,7 @@ const hcwhan = (config = {}) => {
         'no-useless-return': ['off'],
         'no-autofix/no-useless-return': ['warn'],
 
-        'import-x/order': [
+        'import/order': [
           'warn',
           {
             groups: [
@@ -63,7 +63,8 @@ const hcwhan = (config = {}) => {
                 position: 'before',
               },
             ],
-            'newlines-between': 'always-and-inside-groups',
+            'newlines-between': 'always',
+            pathGroupsExcludedImportTypes: ['builtin', 'external', 'object', 'type'],
           },
         ],
         'antfu/top-level-function': ['off'],
