@@ -3,8 +3,9 @@ const baseRules = {
   // "eslint": "8.56.0",
 
   /* recommended change */
-  'no-control-regex': ['off'],
+  'no-empty': ['warn'],
   'no-debugger': ['warn'],
+  'no-control-regex': ['off'],
   'no-constant-condition': ['error', { checkLoops: false }],
   'no-unused-vars': ['warn', { args: 'after-used', argsIgnorePattern: '^_', destructuredArrayIgnorePattern: '^_' }],
 
@@ -32,7 +33,7 @@ const baseRules = {
   'capitalized-comments': ['off'],
   'class-methods-use-this': ['off'],
   complexity: ['off'],
-  'consistent-return': ['error'],
+  'consistent-return': ['warn'],
   'consistent-this': ['error', 'self'],
   curly: ['error', 'all'],
   'default-case': ['error'],
@@ -153,7 +154,7 @@ const baseRules = {
   'no-undefined': ['off'],
   'no-underscore-dangle': ['off'],
   'no-unneeded-ternary': ['error'],
-  'no-unused-expressions': ['error', { allowShortCircuit: true, allowTernary: true }],
+  'no-unused-expressions': ['warn', { allowShortCircuit: true, allowTernary: true }],
   'no-useless-call': ['error'],
   'no-useless-computed-key': ['error'],
   'no-useless-concat': ['error'],
