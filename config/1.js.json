@@ -568,7 +568,7 @@
       2
     ],
     "perfectionist/sort-exports": [
-      2,
+      0,
       {
         "order": "asc",
         "type": "natural"
@@ -605,7 +605,7 @@
       }
     ],
     "perfectionist/sort-named-exports": [
-      2,
+      0,
       {
         "order": "asc",
         "type": "natural"

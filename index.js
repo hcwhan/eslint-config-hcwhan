@@ -38,7 +38,9 @@ const hcwhan = (config = {}) => {
 
         // plugins
         'perfectionist/sort-imports': ['off'],
+        'perfectionist/sort-exports': ['off'],
         'perfectionist/sort-named-imports': ['off'],
+        'perfectionist/sort-named-exports': ['off'],
         'import/order': [
           'warn',
           {
