@@ -172,7 +172,7 @@
       2
     ],
     "no-multi-str": [
-      2
+      1
     ],
     "no-new": [
       2
@@ -787,7 +787,47 @@
       1
     ],
     "style/no-mixed-operators": [
-      1
+      1,
+      {
+        "groups": [
+          [
+            "+",
+            "-",
+            "*",
+            "/",
+            "%",
+            "**"
+          ],
+          [
+            "&",
+            "|",
+            "^",
+            "~",
+            "<<",
+            ">>",
+            ">>>"
+          ],
+          [
+            "==",
+            "!=",
+            "===",
+            "!==",
+            ">",
+            ">=",
+            "<",
+            "<="
+          ],
+          [
+            "&&",
+            "||"
+          ],
+          [
+            "in",
+            "instanceof"
+          ]
+        ],
+        "allowSamePrecedence": true
+      }
     ],
     "style/no-mixed-spaces-and-tabs": [
       1
@@ -1319,11 +1359,17 @@
         "includeExports": true
       }
     ],
+    "no-inner-declarations": [
+      1
+    ],
     "no-promise-executor-return": [
       2
     ],
     "no-unused-private-class-members": [
       1
+    ],
+    "no-useless-assignment": [
+      0
     ],
     "require-atomic-updates": [
       0
@@ -1448,9 +1494,6 @@
     "no-extra-label": [
       2
     ],
-    "no-floating-decimal": [
-      2
-    ],
     "no-implicit-coercion": [
       0
     ],
@@ -1475,43 +1518,8 @@
     "no-magic-numbers": [
       0
     ],
-    "no-mixed-operators": [
-      2,
-      {
-        "groups": [
-          [
-            "&",
-            "|",
-            "^",
-            "~",
-            "<<",
-            ">>",
-            ">>>"
-          ],
-          [
-            "==",
-            "!=",
-            "===",
-            "!==",
-            ">",
-            ">=",
-            "<",
-            "<="
-          ],
-          [
-            "&&",
-            "||"
-          ],
-          [
-            "in",
-            "instanceof"
-          ]
-        ],
-        "allowSamePrecedence": true
-      }
-    ],
     "no-multi-assign": [
-      2
+      1
     ],
     "no-negated-condition": [
       0
@@ -1520,6 +1528,9 @@
       0
     ],
     "no-new-object": [
+      2
+    ],
+    "no-object-constructor": [
       2
     ],
     "no-param-reassign": [
@@ -1536,9 +1547,6 @@
     ],
     "no-return-assign": [
       2
-    ],
-    "no-return-await": [
-      0
     ],
     "no-script-url": [
       2
@@ -1625,9 +1633,6 @@
       0
     ],
     "strict": [
-      0
-    ],
-    "line-comment-position": [
       0
     ],
     "no-autofix/prefer-const": [

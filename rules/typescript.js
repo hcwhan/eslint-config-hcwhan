@@ -65,8 +65,8 @@ const typescriptRules = {
     rules[`ts/${ruleName}`] = baseRules[ruleName] || ['error']
     return rules
   }, {}),
-  'no-return-await': ['off'],
-  'ts/return-await': baseRules['no-return-await'],
+
+  'ts/return-await': ['off'],
 }
 
 export default typescriptRules

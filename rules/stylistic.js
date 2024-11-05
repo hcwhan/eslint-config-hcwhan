@@ -54,7 +54,16 @@ const stylisticRules = {
   'style/no-extra-parens': ['off'],
   'style/no-extra-semi': ['warn'],
   'style/no-floating-decimal': ['warn'],
-  'style/no-mixed-operators': ['warn'],
+  'style/no-mixed-operators': ['warn', {
+    groups: [
+      ['+', '-', '*', '/', '%', '**'],
+      ['&', '|', '^', '~', '<<', '>>', '>>>'],
+      ['==', '!=', '===', '!==', '>', '>=', '<', '<='],
+      ['&&', '||'],
+      ['in', 'instanceof'],
+    ],
+    allowSamePrecedence: true,
+  }],
   'style/no-mixed-spaces-and-tabs': ['warn'],
   'style/no-multi-spaces': ['warn'],
   'style/no-multiple-empty-lines': ['warn', { max: 3, maxEOF: 1, maxBOF: 1 }],

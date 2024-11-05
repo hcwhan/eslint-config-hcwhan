@@ -1,6 +1,6 @@
 
 const baseRules = {
-  // "eslint": "8.56.0",
+  // "eslint": "9.14.0",
 
   /* recommended change */
   'no-empty': ['warn'],
@@ -15,6 +15,7 @@ const baseRules = {
   'no-constant-binary-expression': ['error'],
   'no-constructor-return': ['error'],
   'no-duplicate-imports': ['error', { includeExports: true }],
+  'no-inner-declarations': ['warn'],
   'no-new-native-nonconstructor': ['error'],
   'no-promise-executor-return': ['error'],
   'no-self-compare': ['error'],
@@ -23,6 +24,7 @@ const baseRules = {
   'no-unreachable-loop': ['error'],
   'no-unused-private-class-members': ['warn'],
   'no-use-before-define': ['error', { functions: false, classes: true, variables: false }],
+  'no-useless-assignment': ['off'],
   'require-atomic-updates': ['off'],
 
   /* Suggestions */
@@ -75,7 +77,6 @@ const baseRules = {
   'no-extend-native': ['off'],
   'no-extra-bind': ['error'],
   'no-extra-label': ['error'],
-  'no-floating-decimal': ['error'],
   'no-implicit-coercion': ['off'],
   'no-implicit-globals': ['error'],
   'no-implied-eval': ['error'],
@@ -88,27 +89,15 @@ const baseRules = {
   'no-lonely-if': ['off'],
   'no-loop-func': ['error'],
   'no-magic-numbers': ['off'],
-  'no-mixed-operators': [
-    'error',
-    {
-      groups: [
-        // ["+", "-", "*", "/", "%", "**"],
-        ['&', '|', '^', '~', '<<', '>>', '>>>'],
-        ['==', '!=', '===', '!==', '>', '>=', '<', '<='],
-        ['&&', '||'],
-        ['in', 'instanceof'],
-      ],
-      allowSamePrecedence: true,
-    },
-  ],
-  'no-multi-assign': ['error'],
-  'no-multi-str': ['error'],
+  'no-multi-assign': ['warn'],
+  'no-multi-str': ['warn'],
   'no-negated-condition': ['off'],
   'no-nested-ternary': ['off'],
   'no-new': ['error'],
   'no-new-func': ['error'],
   'no-new-object': ['error'],
   'no-new-wrappers': ['error'],
+  'no-object-constructor': ['error'],
   'no-octal-escape': ['error'],
   'no-param-reassign': ['off'],
   'no-plusplus': ['off'],
@@ -119,7 +108,6 @@ const baseRules = {
   'no-restricted-properties': ['off'],
   'no-restricted-syntax': ['off'],
   'no-return-assign': ['error'],
-  'no-return-await': ['off'],
   'no-script-url': ['error'],
   'no-sequences': ['error'],
   'no-shadow': [
@@ -192,7 +180,6 @@ const baseRules = {
   yoda: ['error', 'never'],
 
   /* Layout & Formatting */
-  'line-comment-position': ['off'],
   'unicode-bom': ['warn', 'never'],
 }
 
