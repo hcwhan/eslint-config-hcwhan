@@ -1,6 +1,6 @@
 
 const stylisticRules = {
-  // "@stylistic/eslint-plugin": "2.1.0",
+  // "@stylistic/eslint-plugin": "2.10.1",
 
   'style/array-bracket-newline': ['warn', 'consistent'],
   'style/array-bracket-spacing': ['warn', 'never'],
@@ -13,6 +13,7 @@ const stylisticRules = {
   'style/comma-spacing': ['warn', { before: false, after: true }],
   'style/comma-style': ['warn', 'last'],
   'style/computed-property-spacing': ['warn', 'never'],
+  'style/curly-newline': ['warn', { consistent: true }],
   'style/dot-location': ['warn', 'property'],
   'style/eol-last': ['warn', 'always'],
   'style/func-call-spacing': ['warn', 'never'],
@@ -113,11 +114,13 @@ const stylisticRules = {
   'style/jsx-curly-spacing': ['off'],
   'style/jsx-equals-spacing': ['off'],
   'style/jsx-first-prop-new-line': ['off'],
+  'style/jsx-function-call-newline': ['off'],
   'style/jsx-indent': ['off'],
   'style/jsx-indent-props': ['off'],
   'style/jsx-max-props-per-line': ['off'],
   'style/jsx-newline': ['off'],
   'style/jsx-one-expression-per-line': ['off'],
+  'style/jsx-pascal-case': ['off'],
   'style/jsx-props-no-multi-spaces': ['off'],
   'style/jsx-quotes': ['warn', 'prefer-double'],
   'style/jsx-self-closing-comp': ['off'],

@@ -957,8 +957,7 @@
       0
     ],
     "style/jsx-function-call-newline": [
-      2,
-      "multiline"
+      0
     ],
     "style/jsx-indent-props": [
       0
@@ -1000,6 +999,12 @@
     ],
     "style/array-element-newline": [
       0
+    ],
+    "style/curly-newline": [
+      1,
+      {
+        "consistent": true
+      }
     ],
     "style/func-call-spacing": [
       1,
@@ -1096,6 +1101,9 @@
       0
     ],
     "style/jsx-newline": [
+      0
+    ],
+    "style/jsx-pascal-case": [
       0
     ],
     "style/jsx-props-no-multi-spaces": [
