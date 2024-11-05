@@ -1829,7 +1829,8 @@
           "defineProps",
           "defineEmits",
           "defineSlots"
-        ]
+        ],
+        "defineExposeLast": true
       }
     ],
     "vue/dot-location": [
@@ -2524,6 +2525,9 @@
       1,
       "type-based"
     ],
+    "vue/enforce-style-attribute": [
+      0
+    ],
     "vue/html-button-has-type": [
       0
     ],
@@ -2543,6 +2547,12 @@
     "vue/max-lines-per-block": [
       0
     ],
+    "vue/max-props": [
+      0
+    ],
+    "vue/max-template-depth": [
+      0
+    ],
     "vue/new-line-between-multi-line-property": [
       1,
       {
@@ -2558,6 +2568,9 @@
     "vue/no-boolean-default": [
       1,
       "default-false"
+    ],
+    "vue/no-deprecated-delete-set": [
+      1
     ],
     "vue/no-deprecated-model-definition": [
       2,
@@ -2665,11 +2678,17 @@
     "vue/prefer-true-attribute-shorthand": [
       0
     ],
+    "vue/require-default-export": [
+      1
+    ],
     "vue/require-direct-export": [
       1
     ],
     "vue/require-emit-validator": [
       2
+    ],
+    "vue/require-explicit-slots": [
+      1
     ],
     "vue/require-expose": [
       1

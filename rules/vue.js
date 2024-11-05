@@ -48,7 +48,7 @@ const stylisticExtendRules = [
 ]
 
 const vueRules = {
-  // "eslint-plugin-vue": "9.19.2",
+  // "eslint-plugin-vue": "9.30.0",
 
   /* Override JS */
   // set here
@@ -89,8 +89,9 @@ const vueRules = {
   'vue/component-options-name-casing': ['warn', 'PascalCase'],
   'vue/custom-event-name-casing': ['warn', 'camelCase'],
   'vue/define-emits-declaration': ['warn', 'type-literal'],
-  'vue/define-macros-order': ['warn', { order: ['defineOptions', 'defineProps', 'defineEmits', 'defineSlots'] }],
+  'vue/define-macros-order': ['warn', { order: ['defineOptions', 'defineProps', 'defineEmits', 'defineSlots'], defineExposeLast: true }],
   'vue/define-props-declaration': ['warn', 'type-based'],
+  'vue/enforce-style-attribute': ['off'],
   'vue/html-button-has-type': ['off'],
   'vue/html-comment-content-newline': ['warn'],
   'vue/html-comment-content-spacing': ['warn', 'always'],
@@ -98,10 +99,13 @@ const vueRules = {
   'vue/match-component-file-name': ['off'],
   'vue/match-component-import-name': ['off'],
   'vue/max-lines-per-block': ['off'],
+  'vue/max-props': ['off'],
+  'vue/max-template-depth': ['off'],
   'vue/new-line-between-multi-line-property': ['warn', { minLineOfMultilineProperty: 4 }],
   'vue/next-tick-style': ['off'],
   'vue/no-bare-strings-in-template': ['off'],
   'vue/no-boolean-default': ['warn', 'default-false'],
+  'vue/no-deprecated-delete-set': ['warn'],
   'vue/no-deprecated-model-definition': ['error', { allowVue3Compat: true }],
   'vue/no-duplicate-attr-inheritance': ['error'],
   'vue/no-empty-component-block': ['off'],
@@ -141,8 +145,10 @@ const vueRules = {
   'vue/prefer-prop-type-boolean-first': ['error'],
   'vue/prefer-separate-static-class': ['warn'],
   'vue/prefer-true-attribute-shorthand': ['off'],
+  'vue/require-default-export': ['warn'],
   'vue/require-direct-export': ['warn'],
   'vue/require-emit-validator': ['error'],
+  'vue/require-explicit-slots': ['warn'],
   'vue/require-expose': ['warn'],
   'vue/require-macro-variable-name': ['error'],
   'vue/require-name-property': ['off'],
