@@ -575,7 +575,7 @@
       }
     ],
     "perfectionist/sort-imports": [
-      2,
+      0,
       {
         "groups": [
           "type",
@@ -612,7 +612,7 @@
       }
     ],
     "perfectionist/sort-named-imports": [
-      2,
+      0,
       {
         "order": "asc",
         "type": "natural"

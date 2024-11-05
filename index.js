@@ -37,6 +37,8 @@ const hcwhan = (config = {}) => {
         'no-autofix/no-useless-return': ['warn'],
 
         // plugins
+        'perfectionist/sort-imports': ['off'],
+        'perfectionist/sort-named-imports': ['off'],
         'import/order': [
           'warn',
           {
