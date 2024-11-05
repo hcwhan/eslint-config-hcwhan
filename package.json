@@ -2,6 +2,7 @@
   "name": "eslint-config-hcwhan",
   "type": "module",
   "version": "0.9.13",
+  "packageManager": "pnpm@9.12.3",
   "description": "",
   "author": "",
   "license": "ISC",
@@ -11,16 +12,18 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "peerDependencies": {
-    "eslint": ">=9.4.0"
+    "eslint": ">=9.14.0"
   },
   "dependencies": {
-    "@antfu/eslint-config": "^2.20.0",
-    "@unocss/eslint-plugin": "^0.60.4",
-    "eslint-plugin-format": "^0.1.1",
-    "eslint-plugin-no-autofix": "^2.0.0"
+    "@antfu/eslint-config": "^3.8.0",
+    "@unocss/eslint-plugin": "^0.63.6",
+    "eslint-plugin-format": "^0.1.2",
+    "eslint-plugin-no-autofix": "^2.1.0"
   },
   "devDependencies": {
-    "eslint": "^9.4.0",
-    "typescript": "^5.4.5"
+    "@stylistic/eslint-plugin": "^2.10.1",
+    "eslint": "^9.14.0",
+    "eslint-plugin-vue": "^9.30.0",
+    "typescript": "^5.6.3"
   }
 }

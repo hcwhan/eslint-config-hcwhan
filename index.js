@@ -4,7 +4,6 @@ import noAutofix from 'eslint-plugin-no-autofix'
 
 import baseRules from './rules/base.js'
 import stylisticRules from './rules/stylistic.js'
-
 import typescriptRules from './rules/typescript.js'
 import vueRules from './rules/vue.js'
 
@@ -52,16 +51,11 @@ const hcwhan = (config = {}) => {
               'type',
             ],
             pathGroups: [
-              {
-                pattern: '~/**',
-                group: 'parent',
-                position: 'before',
-              },
-              {
-                pattern: '@/**',
-                group: 'parent',
-                position: 'before',
-              },
+              { pattern: '~/**', group: 'parent', position: 'before' },
+              { pattern: '@/**', group: 'parent', position: 'before' },
+              { pattern: '~@/**', group: 'parent', position: 'before' },
+              { pattern: '~~/**', group: 'parent', position: 'before' },
+              { pattern: '@@/**', group: 'parent', position: 'before' },
             ],
             'newlines-between': 'always',
             pathGroupsExcludedImportTypes: ['builtin', 'external', 'object', 'type'],
@@ -82,6 +76,7 @@ const hcwhan = (config = {}) => {
       typescript: true,
       vue: true,
     },
+
     {
       files: ['**/tsconfig.json', '**/tsconfig.*.json'],
       rules: {
