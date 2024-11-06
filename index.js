@@ -60,6 +60,7 @@ const hcwhan = (config = {}) => {
               { pattern: '~/**', group: 'parent', position: 'before' },
               { pattern: '@/**', group: 'parent', position: 'before' },
               { pattern: '~@/**', group: 'parent', position: 'before' },
+              { pattern: '@~/**', group: 'parent', position: 'before' },
               { pattern: '~~/**', group: 'parent', position: 'before' },
               { pattern: '@@/**', group: 'parent', position: 'before' },
             ],

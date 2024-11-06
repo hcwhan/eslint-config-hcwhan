@@ -1657,7 +1657,7 @@
       2
     ],
     "vue/return-in-computed-property": [
-      2
+      1
     ],
     "vue/return-in-emits-validator": [
       2
@@ -2388,6 +2388,11 @@
           },
           {
             "pattern": "~@/**",
+            "group": "parent",
+            "position": "before"
+          },
+          {
+            "pattern": "@~/**",
             "group": "parent",
             "position": "before"
           },
