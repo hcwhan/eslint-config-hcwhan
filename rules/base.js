@@ -66,7 +66,7 @@ const baseRules = {
   'no-array-constructor': ['error'],
   'no-bitwise': ['off'],
   'no-caller': ['error'],
-  'no-console': ['warn', { allow: ['info', 'warn', 'error'] }],
+  'no-console': ['warn', { allow: ['info', 'warn', 'error', 'debug'] }],
   'no-continue': ['off'],
   'no-div-regex': ['off'],
   'no-else-return': ['off'],

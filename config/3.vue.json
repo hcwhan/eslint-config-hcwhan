@@ -76,7 +76,8 @@
         "allow": [
           "info",
           "warn",
-          "error"
+          "error",
+          "debug"
         ]
       }
     ],
@@ -2486,7 +2487,8 @@
         "allow": [
           "info",
           "warn",
-          "error"
+          "error",
+          "debug"
         ]
       }
     ],

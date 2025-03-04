@@ -76,7 +76,8 @@
         "allow": [
           "info",
           "warn",
-          "error"
+          "error",
+          "debug"
         ]
       }
     ],
