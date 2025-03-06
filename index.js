@@ -1,6 +1,5 @@
 
 import antfu from '@antfu/eslint-config'
-import noAutofix from 'eslint-plugin-no-autofix'
 
 import baseRules from './rules/base.js'
 import stylisticRules from './rules/stylistic.js'
@@ -24,17 +23,10 @@ const hcwhan = (config = {}) => {
       unocss,
 
       plugins: {
-        'no-autofix': noAutofix,
       },
 
       rules: {
         ...baseRules,
-
-        // no-autofix
-        'prefer-const': ['off'],
-        'no-autofix/prefer-const': ['warn', { destructuring: 'all', ignoreReadBeforeAssign: false }],
-        'no-useless-return': ['off'],
-        'no-autofix/no-useless-return': ['warn'],
 
         // plugins
         'perfectionist/sort-imports': ['off'],

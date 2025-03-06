@@ -148,7 +148,7 @@ const baseRules = {
   'no-useless-concat': ['error'],
   'no-useless-constructor': ['off'],
   'no-useless-rename': ['error'],
-  // 'no-useless-return': [], // noAutoFix
+  'no-useless-return': ['warn'], // IDE need not autofix
   'no-var': ['error'],
   'no-void': ['error'],
   'no-warning-comments': ['off'],
@@ -156,7 +156,7 @@ const baseRules = {
   'one-var': ['off'],
   'operator-assignment': ['error'],
   'prefer-arrow-callback': ['error'],
-  // 'prefer-const': [], // noAutoFix
+  'prefer-const': ['warn', { destructuring: 'all', ignoreReadBeforeAssign: false }], // IDE need not autofix
   'prefer-destructuring': ['off'],
   'prefer-exponentiation-operator': ['error'],
   'prefer-named-capture-group': ['off'],

@@ -349,7 +349,7 @@
       2
     ],
     "no-useless-return": [
-      0
+      1
     ],
     "no-var": [
       2
@@ -378,7 +378,7 @@
       0,
       {
         "destructuring": "all",
-        "ignoreReadBeforeAssign": true
+        "ignoreReadBeforeAssign": false
       }
     ],
     "prefer-exponentiation-operator": [
@@ -1777,16 +1777,6 @@
     "strict": [
       0
     ],
-    "no-autofix/prefer-const": [
-      1,
-      {
-        "destructuring": "all",
-        "ignoreReadBeforeAssign": false
-      }
-    ],
-    "no-autofix/no-useless-return": [
-      1
-    ],
     "import/order": [
       1,
       {
@@ -1923,8 +1913,7 @@
     "yaml:eslint-plugin-yml@1.15.0",
     "toml:eslint-plugin-toml@0.11.1",
     "markdown:@eslint/markdown@6.2.1",
-    "format",
-    "no-autofix:eslint-plugin-no-autofix@2.1.0"
+    "format"
   ],
   "language": "@/js",
   "languageOptions": {
